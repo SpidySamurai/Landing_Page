@@ -1,0 +1,237 @@
+/*
+The following way of making styles is for trying to
+keep an ordered CSS, improve and standardize it.
+
+La siguiente forma de hacer CSS es por intentar de
+mantener un CSS ordenado, mejorando y estandarizandolo.
+
+    1. Positioning          1. Posicionamiento
+    2. Box Model            2. Modelo de caja
+    3. Typography           3. Tipografia
+    4. Visual effects       4. Efectos visuales
+    5. Other                5. Otros
+*/
+
+/*
+These are the variables for color and font weigh that we'r using
+in the page.
+
+Estas son las variables de color y grueso de fuente que usaremos
+en la pagina.
+*/
+:root {
+    /*Primary colors*/
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    /*Neutral colors*/
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+    /*Font Weight*/
+    --light: 400;
+    --normal: 500;
+    --bold: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "spartan", sans-serif;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    background-color: var(--white);
+}
+
+.backgroundImg-top {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    min-height: 23rem;
+    background-image: url("../images/bg-pattern-top-mobile.svg");
+    background-repeat: no-repeat;
+}
+
+.backgroundImg-bottom {
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 50rem;
+    background-image: url("../images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-presentation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 32rem;
+    height: auto;
+    text-align: center;
+}
+
+.presentation--title {
+    padding-top: 7.5rem;
+    padding-bottom: 5rem;
+    width: 90%;
+    min-width: 28.8rem;
+    max-width: 90rem;
+}
+
+.presentation--title h1 {
+    padding-bottom: 2rem;
+    font-size: 4.2rem;
+    font-weight: var(--bold);
+    line-height: 4.2rem;
+    color: var(--very-dark-magenta);
+}
+
+.presentation--title span {
+    font-size: 4.5rem;
+}
+
+.presentation--title p {
+    font-size: 1.7rem;
+    font-weight: var(--normal);
+    line-height: 2.2rem;
+    color: var(--dark-grayish-magenta);
+}
+
+.main-reviews-container {
+    width: 90%;
+    min-width: 28.8rem;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    height: auto;
+}
+
+/*.reviews-slider {*/
+/*    width: 100%;*/
+/*}*/
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 36rem;
+    min-width: 28.8rem;
+    min-height: 4rem;
+    max-height: 8rem;
+    padding: 2rem;
+    margin: 1.5rem auto;
+    background-color: var(--light-grayish-magenta);
+    border-radius: .8rem;
+    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.14);
+}
+
+.review--stars {
+    padding-bottom: 1.5rem;
+}
+
+.star-icon {
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.6rem;
+    background-image: url("../images/icon-star.svg");
+    background-repeat: no-repeat;
+}
+
+.review--text {
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+    color: var(--very-dark-magenta);
+}
+
+.main-customers-review-container {
+    width: 100%;
+    min-width: 32rem;
+}
+
+.customer-review {
+    width: 90%;
+    min-width: 28.8rem;
+    max-width: 40rem;
+    min-height: 25rem;
+    margin: 2rem auto;
+    padding: 3rem 3.4rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, .16);
+    background-color: var(--very-dark-magenta);
+    border-radius: 1.2rem;
+}
+
+.customer-image {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.customer-info {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.customer-info--text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+}
+
+.customer-nick {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+    margin-bottom: .3rem;
+    opacity: 80%;
+    color: var(--white);
+}
+
+.customer-status {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: var(--light);
+    color: var(--soft-pink);
+    opacity: 50%;
+}
+
+.customer-review-body {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: var(--normal);
+    line-height: 2.2rem;
+    opacity: 70%;
+    color: var(--light-grayish-magenta);
+}
+
+.colton {
+    background-image: url("../images/image-colton.jpg");
+}
+
+.irene {
+    background-image: url("../images/image-irene.jpg");
+
+}
+
+.anne {
+    background-image: url("../images/image-anne.jpg");
+}
+
+
+

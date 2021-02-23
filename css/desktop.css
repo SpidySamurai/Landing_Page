@@ -1,0 +1,85 @@
+:root {
+    --space-left: 3.2rem;
+    --space-down: 1.6rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.backgroundImg-top {
+    min-height: 36rem;
+    background-image: url("../images/bg-pattern-top-desktop.svg");
+}
+
+.backgroundImg-bottom {
+    height: 67.3rem;
+    background-image: url("../images/bg-pattern-bottom-desktop.svg");
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 6.5rem;
+}
+
+.top-content {
+    display: flex;
+}
+
+.main-presentation-container {
+    width: 55%;
+    text-align: left;
+}
+
+.main-reviews-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 0;
+}
+
+.card-1 {
+    margin-left: var(--space-left);
+}
+
+.card-2 {
+    margin-left: calc(2 * var(--space-left));
+}
+
+.card-3 {
+    margin-left: calc(3 * var(--space-left));
+}
+
+.review-card {
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 35rem;
+    max-width: 45rem;
+    padding: 0;
+}
+
+.review--stars {
+    padding: 0;
+}
+
+.main-customers-review-container {
+    display: flex;
+    gap: .5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.customer-1 {
+    margin-top: var(--space-down);
+}
+
+.customer-2 {
+    margin-top: calc(2 * var(--space-down));
+}
+
+.customer-3 {
+    margin-top: calc(3 * var(--space-down));
+}
